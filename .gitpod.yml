@@ -3,11 +3,10 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - name: nvm install 8.17.0
-    command: nvm install lts/carbon
-  - name: npm install gulp
-    command: npm install gulp
-  - init: npm install && npm run build
+  - init: |
+      nvm install lts/carbon
+      npm install gulp
+      npm install && npm run build
     command: npm run start
 
 
